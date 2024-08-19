@@ -1,0 +1,27 @@
+mat-toolbar {
+  background-color: #3c3c3c; // Fondo más oscuro para el navbar
+  color: #ececf0f1; // Color dorado para el texto
+  padding: 0 20px; // Espaciado interno
+
+  button {
+    color:  #ececf0f1;// Color del texto
+    background-color: #3c3c3c; // Fondo del botón
+    font-weight: bold; // Negrita para los botones
+    font-size: 16px; // Tamaño de fuente más grande
+    border: none; // Sin borde
+
+    &:hover {
+      color: #00d9ff; ; // Color visible al pasar el mouse
+      background-color: #5c5c5c; // Fondo más oscuro al pasar el mouse
+    }
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  span {
+    font-size: 24px; // Tamaño de fuente más grande para el título
+    font-weight: bold; // Negrita para el título
+  }
+}

@@ -1,0 +1,26 @@
+<div class="character-container">
+  <mat-card class="character-card" appearance="outlined" *ngFor="let personaje of personajes">
+    <div class="character-id">{{ personaje.id }}</div>
+    <img mat-card-image [src]="personaje.image" [alt]="'Image of ' + personaje.name" class="character-image">
+    <mat-card-content class="character-details">
+      <h2>{{ personaje.name }}</h2>
+      <p class="status">
+        <span class="status-dot" [class.alive]="personaje.status === 'Alive'" [class.dead]="personaje.status === 'Dead'"></span>
+        {{ personaje.status }} - {{ personaje.species }}
+      </p>
+      <p class="location">
+        Last known location: <span>{{ personaje.location.name }}</span>
+      </p>
+      <p class="first-seen">
+        First seen in: <span>{{ personaje.episode[0] }}</span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-paginator
+  [length]="totalResults"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[20]"
+  (page)="handlePageEvent($event)">
+</mat-paginator>
